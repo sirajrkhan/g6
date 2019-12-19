@@ -16,18 +16,16 @@ import {
 
 const Navi = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
-
   return (
-    <div>
-      <Navbar color="light" light expand="md">
+    <Navbar light color={props.mytheme} expand="md">
+      {console.log(Navbar)}
         <NavbarBrand href="/">Company Logo</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/">Components</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/sirajrkhan/">Siraj's GitHub</NavLink>
@@ -38,14 +36,14 @@ const Navi = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  Best Selling
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  New Arrivals
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
-                  Reset
+                  Deals of the day
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -53,7 +51,6 @@ const Navi = (props) => {
           <NavbarText>About</NavbarText>
         </Collapse>
       </Navbar>
-    </div>
   );
 }
 

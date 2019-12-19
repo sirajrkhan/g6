@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/bootstrap-extended.scss'
 import 'reactstrap/dist/reactstrap.min'
@@ -13,25 +13,34 @@ import CarouselComp from "../components/c_carousel"
 import CardComp from "../components/c_card"
 import FooterComp from "../components/c_footer"
 
+const theme_var = 'light';
+
 const IndexPage = () => (
   <div className="container">
-    <Navi />
-    <CarouselComp />
-
+    <Navi mytheme={theme_var}/>
+    <Image filename="mosque.jpg" />
     <Container>
+
       <Row>
-        <Col md="4"><CardComp /></Col>
-        <Col md="4"><CardComp /></Col>
-        <Col md="4"><CardComp /></Col>
+    <h4 style={{lineHeight:`2em`,color:`rgba(87, 0, 0, 0.5)`,textAlign:`center`,width:`100%`}}>These are few cards to choose from!!</h4>
+      </Row>
+      <Row>
+        <Col md="4"><CardComp imgName="green_sunset.jpg" cardTitle="Card No. 1" cardSubTitle="One liner for card one" /></Col>
+        <Col md="4"><CardComp imgName="sea.jpg" cardTitle="Card # Two" cardSubTitle="One liner for card TWO"  /></Col>
+        <Col md="4"><CardComp imgName="building.jpg" cardTitle="Three goes here"  cardSubTitle="One liner for card Three" /></Col>
       </Row>
     </Container>
-
     <FooterComp />
   </div>
 )
 
 export default IndexPage
 
+/* <div className="exp">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div> */
 // EXAMPLE: Conditional loading of CSS 
 // class Main extends Component {
 //   componentWillMount() {

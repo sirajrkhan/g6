@@ -5,5 +5,36 @@
 // $white: #0fb800;
 // $black: #b003bb;
 
+//*********** customizing 'light' theme
+$my-maroon:rgb(87, 0, 0);
+$navbar-light-color:                rgba($my-maroon, .5) !default;
+$navbar-light-hover-color:          rgba($my-maroon, .7) !default;
+$navbar-light-active-color:         rgba($my-maroon, .9) !default;
+$navbar-light-disabled-color:       rgba($my-maroon, .3) !default;
+$navbar-light-toggler-border-color: rgba($my-maroon, .1) !default;
+$navbar-light-brand-color:               $navbar-light-active-color !default;
+$navbar-light-brand-hover-color:         $navbar-light-active-color !default;
+
+$card-color:                        $my-maroon !default;
+
+.card{
+    button{
+        background-color: rgba($my-maroon, .5);
+        border-color: rgba($my-maroon, .9);
+        &:hover{
+            background-color: rgba($my-maroon, .9);
+        }
+    }
+}
+.card-subtitle{
+    color: $navbar-light-color;
+}
+
+.dropdown-menu{
+    button{
+        color: rgba($my-maroon, .9);
+    }
+}
+
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap";

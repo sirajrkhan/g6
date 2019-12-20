@@ -14,7 +14,7 @@ let card3 = "card3a.jpg";
 //TODO -- this would come from Contentful
 const theme_var = 'light';
 
-if (theme_var === 'light'){
+if (theme_var === 'lights'){
   require ('../styles/bootstrap-extended.scss');
   hero_img = "mosque.jpg";
   card1 = "card1.jpg";

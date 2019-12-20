@@ -18,7 +18,7 @@ const Navi = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <Navbar dark color="dark" expand="md">
+    <Navbar light color={props.mytheme} expand="md">
         <NavbarBrand href="/">MuZaib Tech</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

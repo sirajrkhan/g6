@@ -36,5 +36,10 @@ $card-color:                        $my-maroon !default;
     }
 }
 
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-monospace;
+$font-size-base:              .8rem !default; // Assumes the browser default, typically `16px`
+
+
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap";

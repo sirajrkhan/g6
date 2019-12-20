@@ -9,7 +9,7 @@ import { Container, Row, Col } from 'reactstrap';
 // import SEO from "../components/seo"
 import Image from "../components/image"
 import Navi from "../components/navcomp"
-import CarouselComp from "../components/c_carousel"
+// import CarouselComp from "../components/c_carousel"
 import CardComp from "../components/c_card"
 import FooterComp from "../components/c_footer"
 
@@ -17,13 +17,10 @@ const theme_var = 'light';
 
 const IndexPage = () => (
   <div className="container">
+    <Container>
     <Navi mytheme={theme_var}/>
     <Image filename="mosque.jpg" />
-    <Container>
-
-      <Row>
     <h4 style={{lineHeight:`2em`,color:`rgba(87, 0, 0, 0.5)`,textAlign:`center`,width:`100%`}}>These are few cards to choose from!!</h4>
-      </Row>
       <Row>
         <Col md="4"><CardComp imgName="green_sunset.jpg" cardTitle="Card No. 1" cardSubTitle="One liner for card one" /></Col>
         <Col md="4"><CardComp imgName="sea.jpg" cardTitle="Card # Two" cardSubTitle="One liner for card TWO"  /></Col>

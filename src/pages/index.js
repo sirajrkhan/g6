@@ -1,6 +1,7 @@
 import React from "react"
-// import 'reactstrap/dist/reactstrap.min'
-import { Container, Row, Col } from 'reactstrap';
+import 'reactstrap/dist/reactstrap.min'
+import { Container, Row, Col } from 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Image from "../components/image"
 import Navi from "../components/navcomp"
 import CardComp from "../components/c_card"
@@ -21,7 +22,7 @@ if (theme_var === 'light'){
   card2 = "card2.jpg";
   card3 = "card3.jpg";
   } else{
-  require ('bootstrap/dist/css/bootstrap.min.css');
+  //require ('bootstrap/dist/css/bootstrap.min.css');
 }
 
 const IndexPage = () => (

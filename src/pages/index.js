@@ -1,5 +1,5 @@
 import React from "react"
-import 'reactstrap/dist/reactstrap.min'
+// import 'reactstrap/dist/reactstrap.min'
 import { Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Image from "../components/image"
@@ -13,7 +13,8 @@ let card2 = "card2a.jpg";
 let card3 = "card3a.jpg";
 
 //TODO -- this would come from Contentful
-const theme_var = 'lights';
+let theme_var = 'light';
+//  theme_var = 'slight';
 
 if (theme_var === 'light'){
   require ('../styles/bootstrap-extended.scss');
@@ -22,8 +23,9 @@ if (theme_var === 'light'){
   card2 = "card2.jpg";
   card3 = "card3.jpg";
   } else{
-  //require ('bootstrap/dist/css/bootstrap.min.css');
-}
+    //require ('bootstrap/dist/css/bootstrap.min.css');
+    require ('reactstrap/dist/reactstrap.min');
+  }
 
 const IndexPage = () => (
   <div className="container">

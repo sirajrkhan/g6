@@ -1,5 +1,5 @@
 import React from "react"
-import 'reactstrap/dist/reactstrap.min'
+// import 'reactstrap/dist/reactstrap.min'
 import { Container, Row, Col } from 'reactstrap';
 import Image from "../components/image"
 import Navi from "../components/navcomp"
@@ -12,7 +12,7 @@ let card2 = "card2a.jpg";
 let card3 = "card3a.jpg";
 
 //TODO -- this would come from Contentful
-const theme_var = 'light';
+const theme_var = 'lights';
 
 if (theme_var === 'light'){
   require ('../styles/bootstrap-extended.scss');

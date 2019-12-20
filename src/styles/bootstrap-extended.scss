@@ -30,15 +30,18 @@ $card-color:                        $my-maroon !default;
     color: $navbar-light-color;
 }
 
-.dropdown-menu{
-    button{
-        color: rgba($my-maroon, .9);
-    }
-}
+// .dropdown-menu{
+//     button{
+//         color: rgba($my-maroon, .9);
+//     }
+// }
 
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$body-bg: rgba(33, 36, 179, 0.4);
+$body-color: $my-maroon;
+
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-monospace;
-$font-size-base:              .8rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              .85rem !default; // Assumes the browser default, typically `16px`
 
 
 // Bootstrap and its default variables

@@ -6,28 +6,49 @@ import Navi from "../components/navcomp"
 import CardComp from "../components/c_card"
 import FooterComp from "../components/c_footer"
 
-let hero_img = "mosque1a.jpg";
-let card1 = "card1a.jpg";
-let card2 = "card2a.jpg";
-let card3 = "card3a.jpg";
-let cmsVar = '';
+const THEME_1 = {
+  label: 'light',
+  hero: 'mosque.jpg',
+  card1: 'card1.jpg',
+  card2: 'card2.jpg',
+  card3: 'card3.jpg'
+};
+
+const THEME_2 = {
+  label: 'dark',
+  hero: 'mosque1a.jpg',
+  card1: 'card1a.jpg',
+  card2: 'card2a.jpg',
+  card3: 'card3a.jpg'
+};
+
+let hero_img;
+let card1;
+let card2;
+let card3;
+let cmsVar;
 
 const setVar = (theVar, cmsVar) => {
-    cmsVar = (theVar !== undefined && theVar !== null) ? theVar : 'dark';
+    cmsVar = (theVar !== undefined && theVar !== null) ? theVar : THEME_2.label;
     setTheme(cmsVar);
+    // setTheme(THEME_2.label);
   }
 
   const setTheme = (inputFromCMS) =>{
     console.log('Theme call: '+inputFromCMS);
-    if (inputFromCMS === 'light') {
+    if (inputFromCMS === THEME_1.label) {
       require('../styles/bootstrap-extended.scss');
-      hero_img = "mosque.jpg";
-      card1 = "card1.jpg";
-      card2 = "card2.jpg";
-      card3 = "card3.jpg";
-      } else {
+      hero_img = THEME_1.hero;
+      card1 = THEME_1.card1;
+      card2 = THEME_1.card2;
+      card3 = THEME_1.card3;
+    } else {
+        hero_img = THEME_2.hero;
+        card1 = THEME_2.card1;
+        card2 = THEME_2.card2;
+        card3 = THEME_2.card3;
         require('bootstrap/dist/css/bootstrap.min.css');
-        require('reactstrap/dist/reactstrap.min');
+        // require('reactstrap/dist/reactstrap.min');
       }
   }
 
@@ -62,20 +83,8 @@ export const query = graphql`
 
 export default IndexPage
 
-// EXAMPLE: Conditional loading of CSS 
-// class Main extends Component {
-  //   componentWillMount() {
-    //        if(this.props.language === 'ar') {
-      //           require('arabic.css');
-      //        } else {
-        //           require('english.css');
-        //        }
-        //   }
-        // }
-                
-        // <Link to="/page-2/">Go to page 2</Link>
-        // import { Link } from "gatsby"
-
+// <Link to="/page-2/">Go to page 2</Link>
+// import { Link } from "gatsby"
 // import CarouselComp from "../components/c_carousel"
 // import Layout from "../components/layout"
 // import SEO from "../components/seo"

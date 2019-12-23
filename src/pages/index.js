@@ -18,6 +18,7 @@ const setVar = (theVar, cmsVar) => {
   }
 
   const setTheme = (inputFromCMS) =>{
+    console.log('Theme call: '+inputFromCMS);
     if (inputFromCMS === 'light') {
       require('../styles/bootstrap-extended.scss');
       hero_img = "mosque.jpg";

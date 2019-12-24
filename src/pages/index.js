@@ -40,8 +40,8 @@ let col3;
 
 const setVar = (theVar, cmsVar) => {
     cmsVar = (theVar !== undefined && theVar !== null) ? theVar : THEME_2.label;
-    // setTheme(cmsVar);
-    setTheme(THEME_1.label);
+    setTheme(cmsVar);
+    //setTheme(THEME_1.label);
   }
 
   const setTheme = (inputFromCMS) =>{

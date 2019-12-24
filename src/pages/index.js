@@ -76,7 +76,6 @@ const setVar = (theVar, cmsVar) => {
       <Image filename={hero_img} />
       <h4 style={{lineHeight:`2em`,color:`rgba(87, 0, 0, 0.5)`,textAlign:`center`,width:`100%`}}>Beautiful... Picturesque and Nature!!</h4>
         <Row>
-        {console.log('row.....'+THEME_1.col1)}
           <Col md={col1} style={{display: `flex`}}><CardComp imgName={card1} cardTitle="Card No. 1" cardSubTitle="One liner for card one" /></Col>
           <Col md={col2} style={{display: `flex`}}><CardComp imgName={card2} cardTitle="Card # Two" cardSubTitle="One liner for card TWO"  /></Col>
           <Col md={col3} style={{display: `flex`}}><CardComp imgName={card3} cardTitle="Three goes here"  cardSubTitle="One liner for card Three" /></Col>

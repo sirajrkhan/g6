@@ -11,7 +11,10 @@ const THEME_1 = {
   hero: 'mosque.jpg',
   card1: 'card1.jpg',
   card2: 'card2.jpg',
-  card3: 'card3.jpg'
+  card3: 'card3.jpg',
+  col1: 6,
+  col2: 3,
+  col3: 3,
 };
 
 const THEME_2 = {
@@ -19,7 +22,10 @@ const THEME_2 = {
   hero: 'mosque1a.jpg',
   card1: 'card1a.jpg',
   card2: 'card2a.jpg',
-  card3: 'card3a.jpg'
+  card3: 'card3a.jpg',
+  col1: 4,
+  col2: 4,
+  col3: 4,
 };
 
 let hero_img;
@@ -28,10 +34,14 @@ let card2;
 let card3;
 let cmsVar;
 
+let col1;
+let col2;
+let col3;
+
 const setVar = (theVar, cmsVar) => {
     cmsVar = (theVar !== undefined && theVar !== null) ? theVar : THEME_2.label;
-    setTheme(cmsVar);
-    // setTheme(THEME_2.label);
+    // setTheme(cmsVar);
+    setTheme(THEME_1.label);
   }
 
   const setTheme = (inputFromCMS) =>{
@@ -42,12 +52,18 @@ const setVar = (theVar, cmsVar) => {
       card1 = THEME_1.card1;
       card2 = THEME_1.card2;
       card3 = THEME_1.card3;
+      col1 = THEME_1.col1;
+      col2 = THEME_1.col2;
+      col3 = THEME_1.col3;
     } else {
         hero_img = THEME_2.hero;
         card1 = THEME_2.card1;
         card2 = THEME_2.card2;
         card3 = THEME_2.card3;
-        require('bootstrap/dist/css/bootstrap.min.css');
+        col1 = THEME_2.col1;
+        col2 = THEME_2.col2;
+        col3 = THEME_2.col3;
+          require('bootstrap/dist/css/bootstrap.min.css');
         // require('reactstrap/dist/reactstrap.min');
       }
   }
@@ -60,9 +76,10 @@ const setVar = (theVar, cmsVar) => {
       <Image filename={hero_img} />
       <h4 style={{lineHeight:`2em`,color:`rgba(87, 0, 0, 0.5)`,textAlign:`center`,width:`100%`}}>Beautiful... Picturesque and Nature!!</h4>
         <Row>
-          <Col md="4"><CardComp imgName={card1} cardTitle="Card No. 1" cardSubTitle="One liner for card one" /></Col>
-          <Col md="4"><CardComp imgName={card2} cardTitle="Card # Two" cardSubTitle="One liner for card TWO"  /></Col>
-          <Col md="4"><CardComp imgName={card3} cardTitle="Three goes here"  cardSubTitle="One liner for card Three" /></Col>
+        {console.log('row.....'+THEME_1.col1)}
+          <Col md={col1} style={{display: `flex`}}><CardComp imgName={card1} cardTitle="Card No. 1" cardSubTitle="One liner for card one" /></Col>
+          <Col md={col2} style={{display: `flex`}}><CardComp imgName={card2} cardTitle="Card # Two" cardSubTitle="One liner for card TWO"  /></Col>
+          <Col md={col3} style={{display: `flex`}}><CardComp imgName={card3} cardTitle="Three goes here"  cardSubTitle="One liner for card Three" /></Col>
         </Row>
       </Container>
       <FooterComp />

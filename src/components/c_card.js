@@ -7,7 +7,7 @@ import Image from './image';
 
 const CardComp = (props) => {
   return (
-    <div style={{ maxWidth: `100%`, padding: `2px`, margin: `2px` }}>
+    <div style={{ maxWidth: `100%`, padding: `2px`, margin: `2px`, display: `flex`, alignItems: `stretch` }}>
       <Card>
       <Image filename={props.imgName} />
         <CardBody>
